@@ -1,0 +1,24 @@
+{
+  "name": "pmi-jakarta-scraper",
+  "version": "1.0.0",
+  "description": "scraping pmi jakarta information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ululajib/pmi-jakarta-scraper.git"
+  },
+  "author": "albab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ululajib/pmi-jakarta-scraper/issues"
+  },
+  "homepage": "https://github.com/ululajib/pmi-jakarta-scraper#readme",
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "debug": "^4.1.0",
+    "http-scraper": "0.0.7"
+  }
+}
