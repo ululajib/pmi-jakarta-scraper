@@ -19,6 +19,7 @@
   "dependencies": {
     "bluebird": "^3.5.3",
     "debug": "^4.1.0",
-    "http-scraper": "0.0.7"
+    "http-scraper": "0.0.7",
+    "tape": "^4.9.1"
   }
 }
