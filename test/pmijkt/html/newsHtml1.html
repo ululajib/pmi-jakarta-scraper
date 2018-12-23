@@ -1,0 +1,2231 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>PMI DKI Kirim Bantuan untuk Gempa dan Tsunami Palu dan Donggala :: PMI DKI Jakarta</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!--[if lte IE 8]><script src="/css/ie/html5shiv.js"></script><![endif]-->
+<link rel="shortcut icon" href="http://dki-jakarta.pmi.or.id/favicon.ico">
+<link href="http://dki-jakarta.pmi.or.id/css/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="stylesheet" href="http://dki-jakarta.pmi.or.id/css/themes/default/default.css" type="text/css" media="screen">
+<link rel="stylesheet" href="http://dki-jakarta.pmi.or.id/css/nivo-slider.css" type="text/css" media="screen">
+<link href="http://dki-jakarta.pmi.or.id/js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="stylesheet" type="text/css" href="http://dki-jakarta.pmi.or.id/css/jcarousel.responsive.css">
+<link rel="stylesheet" href="http://dki-jakarta.pmi.or.id/css/skel.css">
+<link rel="stylesheet" href="http://dki-jakarta.pmi.or.id/css/style.css">
+	
+<script type="text/javascript" src="http://dki-jakarta.pmi.or.id/js/modernizr.custom.21750.js"></script>
+<script src="http://dki-jakarta.pmi.or.id/js/jquery.min.js"></script>
+<script src="http://dki-jakarta.pmi.or.id/js/jquery.dropotron.min.js"></script>
+<script src="http://dki-jakarta.pmi.or.id/js/skel.min.js"></script>
+<script type="text/javascript" src="http://dki-jakarta.pmi.or.id/js/StackBlur.js"></script>
+<script src="http://dki-jakarta.pmi.or.id/js/skel-layers.min.js"></script>
+<script src="http://dki-jakarta.pmi.or.id/js/init.js"></script>
+<script type="text/javascript" src="http://dki-jakarta.pmi.or.id/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://dki-jakarta.pmi.or.id/js/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="http://dki-jakarta.pmi.or.id/js/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="http://dki-jakarta.pmi.or.id/js/jssor.slider.mini.js"></script>
+<script type="text/javascript" src="http://dki-jakarta.pmi.or.id/js/jssor.player.ytiframe.min.js"></script>
+<script type="text/javascript" src="http://dki-jakarta.pmi.or.id/js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="http://dki-jakarta.pmi.or.id/js/jcarousel.responsive.js"></script>
+<script type="text/javascript" src="http://dki-jakarta.pmi.or.id/js/other.js"></script>
+<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->	
+	<script type="text/javascript">
+		$(document).ready(function(){			
+			function loadData(page){
+				$('#news-title, #crumb').html('Hasil Pencarian');
+				$('#news-date').hide();
+				var key = $('#key').val();
+				var cat_id = $('#cat_id').val();
+				$.ajax
+				({
+					type: "POST",
+					url: "/index.php?show=konten&act=list",
+					data: "page="+page+"&key="+key+"&cat_id="+cat_id,
+					success: function(msg)
+					{
+						$("#container").html(msg);
+					}
+				});
+			}
+
+			$('#container .pagination li.active').click(function(){
+				var page = $(this).attr('p');
+				loadData(page);
+			});
+
+			$(window).keydown(function(event){
+				if(event.keyCode == 13) {
+				  loadData(1);
+				  event.preventDefault();
+				  return false;
+				}
+			});
+
+			$('#filter').click(function(){
+				loadData(1);
+			});
+		});
+
+	</script>
+	
+</head>
+<body>
+
+<!-- FB API -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/id_ID/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- END FB API -->
+
+<!-- Header Wrapper -->
+<div class="wrapper style1">
+
+	<!-- Header -->
+	<div id="header">
+		<!-- Logo -->
+		<h1 class="top">
+		<a href="http://dki-jakarta.pmi.or.id/"><img src="http://dki-jakarta.pmi.or.id/images/pmi.png"></a>
+		</h1>
+		<div class="header-left">
+			<a href="http://facebook.com/pmidkijakarta.pmi" target="_blank"><img src="http://dki-jakarta.pmi.or.id/images/facebook.png"></a> &#xA0;
+			<a href="https://twitter.com/pmi_dki_jakarta" target="_blank"><img src="http://dki-jakarta.pmi.or.id/images/twitter.png"></a> &#xA0;
+			<a href="https://plus.google.com/u/0/107612103058673351074" target="_blank"><img src="http://dki-jakarta.pmi.or.id/images/googleplus.png"></a> &#xA0; 
+			<a href="https://mail.pmidkijakarta.or.id/" target="_blank"><img src="http://dki-jakarta.pmi.or.id/images/webmail.png"></a> &#xA0;
+			<select name="lang" onchange="document.location=&apos;/lang/&apos; + this.value + &apos;/&apos; + escape(window.location.href)" style="vertical-align:top;margin-top:4px">
+				<option value="id">Indonesia</option>
+				<option value="en">English</option>
+			</select>
+			<br>
+			PMI Propinsi DKI Jakarta
+		</div>
+	</div>
+</div>	
+
+<div class="header-mobile">
+	<div class="header-title"><a href="http://dki-jakarta.pmi.or.id/">PMI Propinsi DKI Jakarta</a></div>
+	<div class="header-socmed">
+		<a href="http://facebook.com/pmidkijakarta.pmi" target="_blank"><img src="http://dki-jakarta.pmi.or.id/images/facebook.png"></a> &#xA0;
+		<a href="https://twitter.com/pmi_dki_jakarta" target="_blank"><img src="http://dki-jakarta.pmi.or.id/images/twitter.png"></a> &#xA0;
+		<a href="https://plus.google.com/u/0/107612103058673351074" target="_blank"><img src="http://dki-jakarta.pmi.or.id/images/googleplus.png"></a> &#xA0; 
+		<a href="https://mail.pmidkijakarta.or.id/" target="_blank"><img src="http://dki-jakarta.pmi.or.id/images/webmail.png"></a><br>
+		<select name="lang" onchange="document.location=&apos;/lang/&apos; + this.value + &apos;/&apos; + escape(window.location.href)">
+			<option value="id">Indonesia</option>
+			<option value="en">English</option>
+		</select>
+	</div>
+</div>
+
+<!-- Nav -->
+<nav id="nav">
+	<ul>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/home">BERANDA</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/home">PELAYANAN</a>
+<ul>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/Ambulance">Ambulance</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/difabel-di-dki-disosialisasikan-tangguh-bencana">Pendidikan dan Latihan</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/pelayanan/pmr">PMR dan Relawan</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/home">PUBLIKASI</a>
+<ul>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa">Berita dan Peristiwa</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/siaran-pers">Siaran Pers</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/wawancara">Wawancara</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/home">Galeri</a>
+<ul>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/galeri">Galeri Foto</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/video">Galeri Video</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/home">AKTIVITAS</a>
+<ul>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/aktifitas/penangulangan-bencana-alamkonflik">Penanggulangan Bencana</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/aktifitas/data-penanganan-bencana">Data Penanganan Bencana</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/#">Data Rawan Bencana</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/#">Penanganan Bencana Berbasis Masyarakat</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/home">DONASI</a>
+<ul>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/#">Bulan Dana</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/#">Daftar Penghargaan Donor Darah</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/#">Daftar Sumbangan Masyarakat</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/#">Laporan Bantuan APBD</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/agenda">AGENDA</a>
+<ul>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/pelayanan/jadwal-mobil-unit-donor-darah-09072018-sd-15072018">Mobil Unit Darah</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/pelayanan/stok-darah-pmi-dki-jakarta-16-november-2017">Donor Darah</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/agenda/kegiatan">Kegiatan</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/home">DOKUMENTASI</a>
+<ul>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/publikasi/e-magazine">e-Magazine</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/publikasi/brosur">Brosur</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/publikasi/newsletter">Newsletter</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/publikasi/fatwa-mui">Fatwa MUI</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/home">TENTANG KAMI</a>
+<ul>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/biografi/profil-pmi-dki-jakarta">Profil PMI DKI Jakarta</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/profil/visi-dan-misi">Visi dan Misi</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/profil/sejarah-lahirnya-gerakan">Sejarah</a>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/aktifitas/diseminasi">Diseminasi</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="http://dki-jakarta.pmi.or.id/kontak">HUBUNGI KAMI</a>
+</li>
+</ul>
+
+</nav><div id="main-container">
+
+	<div id="breadcrumb">
+		<a href="http://dki-jakarta.pmi.or.id/home">Home</a> &#xBB; <a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa">Berita dan Peristiwa</a> &#xBB; <span id="crumb">PMI DKI Kirim Bantuan untuk Gempa dan Tsunami Palu dan Donggala</span>
+	</div>
+	
+	<div class="general-content">
+		<div id="page-header">
+			<h1 id="news-title">PMI DKI Kirim Bantuan untuk Gempa dan Tsunami Palu dan Donggala</h1>
+			<ul id="news-date" class="konten-meta">
+				<li><i class="icons icon-clock"></i> 3 Oktober 2018 19:19 WIB</li>
+			</ul>
+		</div>
+		<div class="left-content">
+			<div id="container">
+									<div class="news-img"><img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/10/03/pmi-dki-kirim-bantuan-untuk-gempa-dan-tsunami-palu-dan-donggala.jpg"></div>
+								<p class="MsoNormalCxSpFirst" style="text-align:justify;tab-stops:120.25pt"><span lang="IN" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">Palang Merah Indonesia Provinsi DKI Jakarta mengirimkan Relawan untuk membantu tanggap darurat gempa dan tsunami di Palu dan Donggala, Sulawesi Tengah. Tim Relawan yang berasal dari PMI Kota dan Kabupaten se DKI Jakarta yang akan &#xA0;bertugas di lokasi terdampak bencana dilepas oleh Ketua Pengurus Provinsi PMI DKI Jakarta, Muhammad Ali Reza di halaman PMI Provinsi DKI Jakarta, Rabu (3/10/2018.<o:p></o:p></span></p>
+<p class="MsoNormalCxSpMiddle" style="text-align:justify;tab-stops:120.25pt"><span lang="IN" style="font-size: 11pt; font-family: &quot;Trebuchet MS&quot;, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Pengiriman Relawan tersebut sesuai </span><span style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+Calibri">hasil koordinasi dengan PMI Pusat dan PMI Provinsi </span><span lang="IN" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">Sulawesi Tengah. </span><span style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+Calibri">PMI </span><span style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">&#xA0;<span lang="IN">Provinsi </span></span><span style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+Calibri">DKI </span><span style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">&#xA0;</span><span style="font-size:11.0pt;
+font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri">Jakarta </span><span style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">&#xA0;<span lang="IN">mengirimkan &#xA0;48 R</span></span><span style="font-size:11.0pt;
+font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri">elawan terdiri dari dokter</span><span lang="IN" style="font-size:11.0pt;font-family:
+&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri;mso-ansi-language:
+IN">, </span><span style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri">perawat</span><span lang="IN" style="font-size:
+11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri;
+mso-ansi-language:IN">, </span><span style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri">tim <i>Shelter</i> (</span><span lang="IN" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">h</span><span style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+Calibri">unian </span><span lang="IN" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">s</span><span style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:
+Calibri">ementara)</span><span lang="IN" style="font-size:11.0pt;font-family:
+&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri;mso-ansi-language:
+IN">, RFL (<i>restroring family links</i>/pemulihan hubungan keluarga), tim evakuasi, petugas logistik, assesment, dan dapur umum.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-right:-.05pt;text-align:justify"><span lang="IN" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">&#x201C;Mari kita bantu saudara-saudara kita yang terdampak gempa dan tsunami. Berikankah pelayanan dengan sepenuh hati, serta jaga diri dan kesehatan selama di lokasi bencana,&#x201D; kata Muhammad Ali Reza. <o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-right:-.05pt;text-align:justify"><span lang="IN" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">&#x201C;Dalam melaksanakan tugas kemanusiaan tersebut, saya mengharapkan kepada para Relawan agar dapat bekerjasama dengan instansi terkait lainnya,&#x201D; tutur Muhammad Ali Reza.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-right:-.05pt;text-align:justify"><span lang="IN" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">&#x201C;Mudah-mudahan bantuan yang diberikan oleh PMI Provinsi DKI Jakarta dapat membantu meringankan beban saudara-saudara kita yang terkena dampak bencana,&#x201D; tambah Muhammad Ali Reza.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-right:-.05pt;text-align:justify"><span lang="IN" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">Selain Relawan, PMI Provinsi DKI Jakarta juga mengirimkan bantuan &#xA0;antara lain tenda family ten 5 set, tenda serbaguna 1 set, selimut 100 pcs, obat-obatan, air mineral 25 karton, pembalut wanita 4 karton, dan peralatan dapur umum sebanyak 2 set.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-right:-.05pt;text-align:justify"><span lang="IN" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">Relawan yang berasal dari PMI Kota dan Kabupaten se DKI Jakarta tersebut akan berangkat menggunakan pesawat, sedangkan kendaraan dan peralatan lainnya sudah diberangkatkan dengan kapal Aisha Kamilah melalui Pelabuhan Tanjung Priok pada Senin (1/10/2018) yaitu 1 unit ambulans, 2 truk kanvas, 1 unit double cabin dan 1 unit truk.&#xA0; <o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-right:-.05pt;text-align:justify"><span lang="IN" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">Relawan akan bertugas di lokasi bencana dan tsunami selama 14 hari dan akan diperpanjang sesuai dengan situasi di lapangan. Relawan tersebut juga sebelumnya telah melakukan pemeriksaan kesehatan dan vaksinasi, serta diberikan asuransi.<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-right:-.05pt;text-align:justify"><span lang="IN" style="font-size:11.0pt;font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;
+mso-fareast-font-family:Calibri;mso-ansi-language:IN">PMI Provinsi DKI Jakarta juga membuka Posko di halaman PMI Provinsi DKI Jakarta dan halaman Balai Kota DKI Jakarta, sesuai dengan arahan Gubernur Provinsi DKI Jakarta untuk menerima bantuan dari masyarakat Jakarta yang ingin membantu para korban terdampak gempa dan tsunami. Masyarakat juga dapat menyalurkan bantuannya melalui PMI Provinsi DKI Jakarta dengan nomor rekening :<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo1;tab-stops:1.0cm 120.5pt 134.7pt"><!--[if !supportLists]--><span lang="IN" style="font-size:11.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:IN">&#xB7;<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&#xA0;&#xA0;&#xA0; </span></span><!--[endif]--><span lang="IN" style="font-size:11.0pt;
+font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri;
+mso-ansi-language:IN">Bank BCA&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; :&#xA0;&#xA0; 2063 8179 45<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo1;tab-stops:1.0cm 120.5pt 134.7pt"><!--[if !supportLists]--><span lang="IN" style="font-size:11.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:IN">&#xB7;<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&#xA0;&#xA0;&#xA0; </span></span><!--[endif]--><span lang="IN" style="font-size:11.0pt;
+font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri;
+mso-ansi-language:IN">Bank Mandiri&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; :&#xA0;&#xA0; 123 001709 1945<o:p></o:p></span></p>
+<p class="MsoNormal" style="margin-top:0cm;margin-right:-.05pt;margin-bottom:
+0cm;margin-left:36.0pt;margin-bottom:.0001pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l0 level1 lfo1;tab-stops:1.0cm 120.5pt 134.7pt"><!--[if !supportLists]--><span lang="IN" style="font-size:11.0pt;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:IN">&#xB7;<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&#xA0;&#xA0;&#xA0; </span></span><!--[endif]--><span lang="IN" style="font-size:11.0pt;
+font-family:&quot;Trebuchet MS&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:Calibri;
+mso-ansi-language:IN">Bank CIMB Niaga&#xA0; :&#xA0;&#xA0; 800069514600<o:p></o:p></span></p>
+<p class="MsoNormal"><b><span lang="IN" style="font-size: 8pt; font-family: &quot;Trebuchet MS&quot;, sans-serif;">&#xA0;</span></b></p>
+<p class="MsoNormal"><span lang="IN" style="font-size: 11pt; font-family: &quot;Trebuchet MS&quot;, sans-serif;">Untuk informasi lebih lanjut dapat menghubungi :<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="IN" style="font-size: 11pt; font-family: &quot;Trebuchet MS&quot;, sans-serif;">Kepala Markas PMI Provinsi DKI Jakarta, Erna Cahyani, HP 085716525111<o:p></o:p></span></p>
+
+				<div class="fb-comment">
+					<fb:comments href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-kirim-bantuan-untuk-gempa-dan-tsunami-palu-dan-donggala" num_posts="10" width="100%"></fb:comments>
+				</div>
+
+				<div class="add-this">
+					<!-- AddThis Button BEGIN -->
+					<div class="addthis_toolbox addthis_default_style ">
+					<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+					<a class="addthis_button_tweet"></a>
+					<a class="addthis_button_pinterest_pinit"></a>
+					<a class="addthis_counter addthis_pill_style"></a>
+					</div>
+					<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+					<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50cff41d4075291a"></script>
+					<!-- AddThis Button END -->
+				</div>
+
+				<div class="related-news">
+					<div class="related-news-header"><span>Berita dan Peristiwa Terkait</span></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/indonesia-indonesia-red-cross-disaster-response-team-from-dki-jakarta-chapter-makes-26-hour-journey-to-palu-to-begin-initial-disaster-response-activities">Indonesia: Indonesia Red Cross Disaster Response Team from DKI Jakarta Chapter Makes 26-Hour Journey to Palu to Begin Initial Disaster Response Activities</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 12 Oktober 2018 09:35 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/indonesia-indonesia-red-cross-disaster-response-team-from-dki-jakarta-chapter-makes-26-hour-journey-to-palu-to-begin-initial-disaster-response-activities">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/10/12/indonesia-indonesia-red-cross-disaster-response-team-from-dki-jakarta-chapter-makes-26-hour-journey-to-palu-to-begin-initial-disaster-response-activities_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bca-donasikan-4-set-blood-scale-mixer-kepada-pmi-dki-jakarta">BCA Donasikan 4 Set Blood Scale &amp; Mixer Kepada PMI DKI Jakarta</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 24 September 2018 15:08 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bca-donasikan-4-set-blood-scale-mixer-kepada-pmi-dki-jakarta">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/09/28/bca-donasikan-4-set-blood-scale--mixer-kepada-pmi-dki-jakarta_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/menteri-sosial-agus-gumiwang-kartasasmita-membuka-acara-temu-karya-relawan-pmi-tingkat-nasional-vi-di-waduk-jatiluhur-purwakarta">Menteri Sosial Agus Gumiwang Kartasasmita Membuka Acara Temu Karya Relawan PMI Tingkat Nasional VI di Waduk Jatiluhur - Purwakarta</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 18 September 2018 08:09 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/menteri-sosial-agus-gumiwang-kartasasmita-membuka-acara-temu-karya-relawan-pmi-tingkat-nasional-vi-di-waduk-jatiluhur-purwakarta">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/09/18/organisasi-pmi-merupakan-lembaga-terdepan-dalam-hal-kemanusiaan_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/anies-rasyid-baswedan-kukuhkan-panitia-bulan-dana-pmi-dki-jakarta-tahun-2018-di-balai-kota">Anies Rasyid Baswedan Kukuhkan Panitia Bulan Dana PMI DKI Jakarta Tahun 2018 di Balai Kota </a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 31 Agustus 2018 17:19 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/anies-rasyid-baswedan-kukuhkan-panitia-bulan-dana-pmi-dki-jakarta-tahun-2018-di-balai-kota">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/08/31/anies-rasyid-baswedan-kukuhkan-panitia-bulan-dana-pmi-tahun-2018-di-balai-kota_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/memperingati-hut-ke-27-tupperware-gelar-donor-darah-serentak-se-indonesia">Memperingati HUT Ke-27, Tupperware Gelar Donor Darah Serentak Se-Indonesia</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 27 Juli 2018 18:49 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/memperingati-hut-ke-27-tupperware-gelar-donor-darah-serentak-se-indonesia">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/07/27/memperingati-hut-ke-27-tupperware-gelar-donor-darah-serentak-se-indonesia_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-jakarta-menggelar-acara-halal-bi-halal">PMI DKI JAKARTA Menggelar Acara Halal Bi Halal</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 5 Juli 2018 22:23 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-jakarta-menggelar-acara-halal-bi-halal">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/07/06/pmi-dki-jakarta-menggelar-acara-halal-bi-halal_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-jakarta-terima-bantuan-2-unit-motor-ambulance-dari-pt-axa-mandiri">PMI DKI Jakarta Terima Bantuan 2 Unit Motor Ambulance Dari PT AXA Mandiri</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 26 Juni 2018 17:21 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-jakarta-terima-bantuan-2-unit-motor-ambulance-dari-pt-axa-mandiri">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/07/06/pmi-dki-jakarta-terima-bantuan-2-unit-motor-ambulance_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-adakan-buka-puasa-bersama-dengan-anak-yatim">PMI DKI Adakan Buka Puasa Bersama dengan Anak Yatim</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 9 Juni 2018 09:03 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-adakan-buka-puasa-bersama-dengan-anak-yatim">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/06/21/pmi-dki-adakan-buka-puasa-bersama-dengan-anak-yatim_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bakti-sosial-ramadhan-pmi-kota-jakarta-timur">Bakti Sosial Ramadhan PMI Kota Jakarta Timur</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 25 Mei 2018 14:23 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bakti-sosial-ramadhan-pmi-kota-jakarta-timur">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/05/25/bakti-sosial-ramadhan-pmi-kota-jakarta-timur_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/utd-pmi-dki-terima-sertifikat-cpob-dari-bpom">UTD PMI DKI Terima Sertifikat CPOB dari BPOM</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 22 Mei 2018 13:57 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/utd-pmi-dki-terima-sertifikat-cpob-dari-bpom">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/05/22/utd-pmi-dki-terima-sertifikat-cpob-dari-bpom_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pertemuan-dengan-tim-pmi-terkait-rencana-pelaksanaan-focus-group-discussion-fgd-desain-besar-penanggulangan-risiko-bencana-berbasis-komunitas-dki-jakarta">Pertemuan dengan Tim PMI terkait rencana pelaksanaan Focus Group Discussion (FGD) Desain Besar Penanggulangan Risiko Bencana Berbasis Komunitas DKI Jakarta</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 4 Mei 2018 18:44 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pertemuan-dengan-tim-pmi-terkait-rencana-pelaksanaan-focus-group-discussion-fgd-desain-besar-penanggulangan-risiko-bencana-berbasis-komunitas-dki-jakarta">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/06/05/pertemuan-dengan-tim-pmi-terkait-rencana-pelaksanaan-focus-group-discussion-fgd-desain-besar-penanggulangan-risiko-bencana-berbasis-komunitas-dki-jakarta_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/peran-pmi-dalam-kegiatan-pesta-rakyat">Peran PMI dalam Kegiatan Pesta Rakyat</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 28 April 2018 23:42 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/peran-pmi-dalam-kegiatan-pesta-rakyat">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/04/30/peran-pmi-dalam-kegiatan-pesta-rakyat_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-se-dki-jakarta-gelar-simulasi-tanggap-bencana-banjir-di-kelpengadegan">PMI se DKi Jakarta Gelar Simulasi Tanggap Bencana Banjir di Kel.Pengadegan</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 28 April 2018 21:14 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-se-dki-jakarta-gelar-simulasi-tanggap-bencana-banjir-di-kelpengadegan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/04/29/pmi-se-dki-jakarta-gelar-simulasi-tanggap-bencana-banjir-di-kelpengadegan_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/muhammad-ali-reza-melantik-pengurus-pmi-kota-jakarta-pusat-masa-bakti-2018-2023">Muhammad Ali Reza Melantik Pengurus PMI Kota Jakarta Pusat Masa Bakti 2018-2023</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 19 April 2018 11:06 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/muhammad-ali-reza-melantik-pengurus-pmi-kota-jakarta-pusat-masa-bakti-2018-2023">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/04/19/muhammad-ali-reza-melantik-pengurus-pmi-kota-jakarta-pusat-masa-bakti-2018-2023_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/eksistensi-forpis-pmi-provinsi-dki-jakarta">Eksistensi FORPIS PMI Provinsi DKI Jakarta</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 16 April 2018 10:38 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/eksistensi-forpis-pmi-provinsi-dki-jakarta">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/04/16/eksistensi-forpis-pmi-provinsi-dki-jakarta_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-banten-melakukan-kunjungan-ke-pmi-dki">PMI Banten Melakukan Kunjungan ke PMI DKI</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 11 April 2018 14:39 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-banten-melakukan-kunjungan-ke-pmi-dki">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/04/11/pmi-banten-melakukan-kunjungan-ke-pmi-dki_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kota-jakarta-utara-gelar-ujian-pmr">PMI Kota Jakarta Utara Gelar Ujian PMR</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 9 April 2018 17:37 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kota-jakarta-utara-gelar-ujian-pmr">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/04/09/pmi-kota-jakarta-utara-gelar-ujian-pmr_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/persembahan-2800-kantong-darah-di-hari-ulang-tahun-ke-28-sogo-indonesia">Persembahan 2.800 Kantong Darah Di Hari Ulang Tahun Ke-28 SOGO Indonesia</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 28 Maret 2018 17:43 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/persembahan-2800-kantong-darah-di-hari-ulang-tahun-ke-28-sogo-indonesia">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/03/28/persembahan-2800-kantong-darah-di-hari-ulang-tahun-ke-28-sogo-indonesia_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/rapat-penyusunan-desain-besar-penanggulangan-bencana-berbasis-komunitas-provinsi-dki-jakarta">Rapat Penyusunan Desain Besar Penanggulangan Bencana Berbasis Komunitas Provinsi DKI Jakarta</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 15 Maret 2018 15:53 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/rapat-penyusunan-desain-besar-penanggulangan-bencana-berbasis-komunitas-provinsi-dki-jakarta">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/06/05/rapat-penyusunan-desain-besar-penanggulangan-bencana-berbasis-komunitas-provinsi-dki-jakarta_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-jakarta-salurkan-bantuan-untuk-korban-kebakaran-di-krukut">PMI DKI Jakarta Salurkan Bantuan Untuk  Korban Kebakaran di Krukut</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 15 Maret 2018 15:19 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-jakarta-salurkan-bantuan-untuk-korban-kebakaran-di-krukut">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/03/19/pmi-dki-jakarta-salurkan-bantuan-untuk--korban-kebakaran-di-krukut_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/telekonferensi-vee-armstrong-consultan-quality-regulatory-asal-australia-dengan-peserta-gmp-workshop-live-2018">Telekonferensi : Vee Armstrong (Consultan, Quality &amp; Regulatory, asal Australia) dengan peserta GMP Workshop Live 2018</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 14 Maret 2018 11:14 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/telekonferensi-vee-armstrong-consultan-quality-regulatory-asal-australia-dengan-peserta-gmp-workshop-live-2018">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/03/20/telekonferensi--vee-armstrong-consultan-quality--regulatory-asal-australia-dengan-peserta-gmp-workshop-live-2018_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pertemuan-bank-darah-rumah-sakit-dengan-utd-pmi-provinsi-dki-jakarta">Pertemuan Bank Darah Rumah Sakit dengan UTD PMI Provinsi DKI Jakarta</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 13 Maret 2018 14:02 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pertemuan-bank-darah-rumah-sakit-dengan-utd-pmi-provinsi-dki-jakarta">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/03/20/pertemuan-bank-darah-rumah-sakit-dengan-utd-pmi-provinsi-dki-jakarta_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/yayasan-mekar-abadi-adakan-donor-darah-bertepatan-dengan-acara-mengenang-bapak-pembangunan-indonesia-hm-soeharto">Yayasan Mekar Abadi adakan donor darah bertepatan dengan acara mengenang Bapak Pembangunan Indonesia HM Soeharto</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 11 Maret 2018 18:34 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/yayasan-mekar-abadi-adakan-donor-darah-bertepatan-dengan-acara-mengenang-bapak-pembangunan-indonesia-hm-soeharto">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/03/19/yayasan-mekar-abadi-adakan-donor-darah-bertepatan-dengan-acara-mengenang-bapak-pembangunan-indonesia-hm-soeharto_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/utd-pmi-provinsi-dki-jakarta-di-radio-dfm-jakarta">UTD PMI Provinsi DKI Jakarta di Radio DFM Jakarta</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 9 Maret 2018 15:32 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/utd-pmi-provinsi-dki-jakarta-di-radio-dfm-jakarta">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/03/19/utd-pmi-provinsi-dki-jakarta-di-radio-dfm-jakarta_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/audiensi-pengurus-provinsi-pmi-dki-jakarta-dengan-kanwil-kemenag-provinsi-dki-jakarta">AUDIENSI PENGURUS PROVINSI PMI DKI JAKARTA DENGAN KANWIL KEMENAG PROVINSI DKI JAKARTA</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 8 Maret 2018 15:43 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/audiensi-pengurus-provinsi-pmi-dki-jakarta-dengan-kanwil-kemenag-provinsi-dki-jakarta">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/03/08/audiensi-pengurus-provinsi-pmi-dki-jakarta-dengan-kanwil-kemenag-provinsi-dki-jakarta_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/peringati-hut-ke-69-bekangad-selenggarakan-donor-darah">Peringati HUT Ke-69, BEKANGAD Selenggarakan Donor Darah</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 8 Maret 2018 15:26 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/peringati-hut-ke-69-bekangad-selenggarakan-donor-darah">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/03/19/peringati-hut-ke-69-bekangad-selenggarakan-donor-darah_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/utd-pmi-dki-jakarta-terima-ambulans-dari-bca">UTD PMI DKI Jakarta Terima Ambulans Dari BCA</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 21 Februari 2018 16:26 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/utd-pmi-dki-jakarta-terima-ambulans-dari-bca">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/02/28/utd-pmi-dki-jakarta-terima-ambulans-dari-bca_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/teken-kerja-sama-tiga-provinsi-pmi-banten-diapresiasi">Teken Kerja Sama Tiga Provinsi, PMI Banten Diapresiasi</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 21 Februari 2018 15:00 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/teken-kerja-sama-tiga-provinsi-pmi-banten-diapresiasi">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/02/27/teken-kerja-sama-tiga-provinsi-pmi-banten-diapresiasi_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/penutupan-bulan-dana-pmi-dki-tahun-2017">Penutupan Bulan Dana PMI DKI Tahun 2017</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 31 Januari 2018 16:11 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/penutupan-bulan-dana-pmi-dki-tahun-2017">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/01/31/penutupan-bulan-dana-pmi-dki-tahun-2017_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bulan-dana-pmi-kab-kepulauan-seribu-berhasl-capai-target">Bulan Dana PMI Kab. Kepulauan Seribu Berhasl Capai Target</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 27 Januari 2018 12:34 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bulan-dana-pmi-kab-kepulauan-seribu-berhasl-capai-target">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/01/27/bulan-dana-pmi-kab-kepulauan-seribu-berhasl-capai-target_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kota-jakarta-selatan-berhasil-menghimpun-dana-rp-33-miliar">PMI Kota Jakarta Selatan Berhasil Menghimpun Dana Rp 3,3 Miliar</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 25 Januari 2018 16:20 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kota-jakarta-selatan-berhasil-menghimpun-dana-rp-33-miliar">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/01/26/pmi-kota-jakarta-selatan-berhasil-menghimpun-dana-rp-33-miliar_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/perolehan-bulan-dana-pmi-jakarta-timur-tertinggi-se-dki-jakarta">PEROLEHAN BULAN DANA PMI JAKARTA TIMUR TERTINGGI SE DKI JAKARTA</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 24 Januari 2018 16:00 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/perolehan-bulan-dana-pmi-jakarta-timur-tertinggi-se-dki-jakarta">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/01/27/perolehan-bulan-dana-pmi-jakarta-timur-tertinggi-se-dki-jakarta_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jakarta-utara-himpun-dana-sebesar-rp-12-m">PMI Jakarta Utara Himpun Dana Sebesar Rp. 1,2 M</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 23 Januari 2018 20:16 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jakarta-utara-himpun-dana-sebesar-rp-12-m">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/01/27/pmi-jakarta-utara-himpun-dana-sebesar-rp-12-m_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bulan-dana-pmi-jakarta-barat-berhasil-himpun-rp3-miliar">BULAN DANA PMI JAKARTA BARAT BERHASIL HIMPUN Rp.3 MILIAR</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 18 Januari 2018 16:10 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bulan-dana-pmi-jakarta-barat-berhasil-himpun-rp3-miliar">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/01/18/bulan-dana-pmi-jakarta-barat-berhasil-himpun-rp3-miliar_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/walikota-jakarta-pusat-menutup-kegiatan-bulan-dana-pmi">WALIKOTA JAKARTA PUSAT MENUTUP KEGIATAN BULAN DANA PMI</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 18 Januari 2018 15:58 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/walikota-jakarta-pusat-menutup-kegiatan-bulan-dana-pmi">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/01/18/walikota-jakarta-pusat-menutup-kegiatan-bulan-dana-pmi_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/walikota-jakarta-selatan-lantik-2100-anak-pmr">Walikota Jakarta Selatan Lantik 2.100 Anak PMR</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 5 Desember 2017 09:10 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/walikota-jakarta-selatan-lantik-2100-anak-pmr">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/12/05/walikota-jakarta-selatan-lantik-2100-anak-pmr_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-menghadiri-apel-besar-kesiapsiagaan-bencana-di-silang-monas">PMI Menghadiri Apel Besar Kesiapsiagaan Bencana di Silang Monas</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 18 November 2017 16:56 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-menghadiri-apel-besar-kesiapsiagaan-bencana-di-silang-monas">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/11/23/pmi-menghadiri-apel-besar-kesiapsiagaan-bencana-di-silang-monas_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kepulauan-seribu-salurkan-bantuan-ke-korban-puting-beliung">PMI Kepulauan Seribu Salurkan Bantuan ke Korban Puting Beliung</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 17 November 2017 16:00 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kepulauan-seribu-salurkan-bantuan-ke-korban-puting-beliung">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/11/23/pmi-kepulauan-seribu-salurkan-bantuan-ke-korban-puting-beliung_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/sebanyak-400-anggota-pmr-tingkta-madya-dan-wira-mengikuti-latihan-gabungan">Sebanyak 400 Anggota PMR Tingkta Madya dan Wira  Mengikuti Latihan Gabungan</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 17 November 2017 15:54 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/sebanyak-400-anggota-pmr-tingkta-madya-dan-wira-mengikuti-latihan-gabungan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/11/23/sebanyak-400-anggota-pmr-tingkta-madya-dan-wira--mengikuti-latihan-gabungan_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/olahraga-persahabatan">Olahraga Persahabatan </a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 4 November 2017 08:55 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/olahraga-persahabatan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/11/08/olahraga-persahabatan-_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-jakarta-adakan-lintas-terampil-guna-meningkatkan-pemahaman-relawan">PMI DKI Jakarta Adakan Lintas Terampil  Guna Meningkatkan Pemahaman Relawan</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 4 November 2017 08:50 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-jakarta-adakan-lintas-terampil-guna-meningkatkan-pemahaman-relawan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/11/08/pmi-dki-jakarta-adakan-lintas-terampil--guna-meningkatkan-pemahaman-relawan_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/olahraga-persahabatan-tkr-2017">Olahraga Persahabatan TKR 2017</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 3 November 2017 08:49 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/olahraga-persahabatan-tkr-2017">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/11/08/olahraga-persahabatan-tkr-2017_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/psychosocial-support-programme">Psychosocial Support Programme</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 3 November 2017 08:46 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/psychosocial-support-programme">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/11/08/psychosocial-support-programme_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/cerdas-terampil-dalam-pertolongan-pertama-dan-ambulan">Cerdas Terampil dalam  Pertolongan Pertama dan Ambulan</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 3 November 2017 08:43 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/cerdas-terampil-dalam-pertolongan-pertama-dan-ambulan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/11/08/cerdas-terampil-dalam--pertolongan-pertama-dan-ambulan_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bermain-sambil-belajar-lewat-kpm-challenge">Bermain Sambil Belajar Lewat KPM Challenge</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 3 November 2017 08:36 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bermain-sambil-belajar-lewat-kpm-challenge">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/11/08/bermain-sambil-belajar-lewat-kpm-challenge_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/gubernur-anies-baswedan-dalam-temu-karya-sukarelawan-tingkatkan-kinerja-dalam-tugas-mulia-menangani-masalah-kemanusiaan">Gubernur Anies Baswedan dalam Temu Karya Sukarelawan: Tingkatkan Kinerja Dalam Tugas Mulia Menangani Masalah Kemanusiaan</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 2 November 2017 11:00 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/gubernur-anies-baswedan-dalam-temu-karya-sukarelawan-tingkatkan-kinerja-dalam-tugas-mulia-menangani-masalah-kemanusiaan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/11/02/gubernur-anies-baswedan-dalam-temu-karya-sukarelawan-tingkatkan-kinerja-dalam-tugas-mulia-menangani-masalah-kemanusiaan_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kota-jakarta-barat-evakuasi-7-jasad-korban-ledakan-pabrik-petasan">PMI Kota Jakarta Barat Evakuasi 7 Jasad Korban Ledakan Pabrik Petasan</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 26 Oktober 2017 19:19 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kota-jakarta-barat-evakuasi-7-jasad-korban-ledakan-pabrik-petasan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/10/26/pmi-kota-jakarta-barat-evakuasi-7-jasad-korban-ledakan-pabrik-petasan_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/targetkan-rp-4-m-walikota-minta-sukseskan-bulan-dana-pmi-jaksel">Targetkan Rp 4 M, Walikota Minta Sukseskan Bulan Dana PMI Jaksel</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 20 Oktober 2017 16:57 WIB</li>
+							</ul>
+							<div class="main-text">Walikota Kota Administrasi Jakarta Selatan Tri Kurniadi meminta jajarannya agar menyukseskan kegiatan Bulan Dana PMI Kota Jakarta Selatan Tahun 2017. Dia berharap, target Rp 4 Miliar yang dicanangkan dapat tercapai dengan memaksimalkan donasi dari potensi yang ada di Jakarta Selatan.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/targetkan-rp-4-m-walikota-minta-sukseskan-bulan-dana-pmi-jaksel">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/10/20/targetkan-rp-4-m-walikota-minta-sukseskan-bulan-dana-pmi-jaksel_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/walikota-optimis-bulan-dana-pmi-jakut-tercapai"> Walikota Optimis Bulan Dana PMI Jakut Tercapai</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 17 Oktober 2017 17:25 WIB</li>
+							</ul>
+							<div class="main-text">Walikota Kota Administrasi Jakarta Utara Husain Murad mengaku optimis target Rp 3 Miliar pada Bulan Dana Tahun 2017 akan tercapai. Hal itu disampaikan usai Pengukuhan Panitia dan Peluncuran Kupon Bulan Dana PMI Kota Jakarta Utara, Selasa (17/10).</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/walikota-optimis-bulan-dana-pmi-jakut-tercapai">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/10/20/-walikota-optimis-bulan-dana-pmi-jakut-tercapai_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/walikota-jakarta-timur-melantik-4230-anggota-pmr">Walikota Jakarta Timur Melantik 4.230 Anggota PMR</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 15 Oktober 2017 00:00 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/walikota-jakarta-timur-melantik-4230-anggota-pmr">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/10/25/walikota-jakarta-timur-melantik-4230-anggota-pmr_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/stip-bekerjasama-dengan-pmi-jakarta-utara-gelar-familiarisasi-alat-kesehatan-diatas-kapal">STIP Bekerjasama Dengan PMI Jakarta Utara Gelar Familiarisasi Alat Kesehatan Diatas Kapal</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 5 Oktober 2017 15:17 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/stip-bekerjasama-dengan-pmi-jakarta-utara-gelar-familiarisasi-alat-kesehatan-diatas-kapal">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/10/05/stip-bekerjasama-dengan-pmi-jakarta-utara-gelar-familiarisasi-alat-kesehatan-diatas-kapal_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/meriahnya-hut-pmi-ke-72-di-jakarta-utara">Meriahnya HUT PMI ke 72 di Jakarta Utara</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 24 September 2017 16:48 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/meriahnya-hut-pmi-ke-72-di-jakarta-utara">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/09/24/meriahnya-hut-pmi-ke-72-di-jakarta-utara_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/walikota-jakarta-selatan-terima-penghargaan-dari-pmi-pusat">Walikota Jakarta Selatan Terima Penghargaan dari PMI Pusat</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 18 September 2017 16:39 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/walikota-jakarta-selatan-terima-penghargaan-dari-pmi-pusat">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/09/24/walikota-jakarta-selatan-terima-penghargaan-dari-pmi-pusat_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/peringati-hari-pertolongan-pertama-sedunia-hansaplast-bekerjasama-dengan-pmi-membagikan-10000-dompet-pertolongan-pertama">Peringati Hari Pertolongan Pertama Sedunia, Hansaplast Bekerjasama Dengan PMI membagikan 10.000 Dompet Pertolongan Pertama</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 12 September 2017 08:31 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/peringati-hari-pertolongan-pertama-sedunia-hansaplast-bekerjasama-dengan-pmi-membagikan-10000-dompet-pertolongan-pertama">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/09/12/peringati-hari-pertolongan-pertama-sedunia-hansaplast-bekerjasama-dengan-pmi-membagikan-10000-dompet-pertolongan-pertama_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/temu-sibat-sukarelawan-pmi-tingkat-nasional">Temu SIBAT Sukarelawan PMI Tingkat Nasional</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 5 September 2017 09:35 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/temu-sibat-sukarelawan-pmi-tingkat-nasional">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/09/05/temu-sibat-sukarelawan-pmi-tingkat-nasional_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/170-anak-ikuti-psikologi-support-program-pmi-kota-jakarta-selatan">170 Anak Ikuti Psikologi Support Program PMI Kota Jakarta Selatan</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 4 September 2017 08:53 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/170-anak-ikuti-psikologi-support-program-pmi-kota-jakarta-selatan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/09/04/170-anak-ikuti-psikologi-support-program-pmi-kota-jakarta-selatan_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/gandeng-pmi-biznet-gelar-donor-darah">Gandeng PMI, Biznet Gelar Donor Darah</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 28 Agustus 2017 15:06 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/gandeng-pmi-biznet-gelar-donor-darah">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/08/28/gandeng-pmi-biznet-gelar-donor-darah_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kota-jakarta-selatan-bantu-korban-kebakaran-jalan-kangkung">PMI Kota Jakarta Selatan Bantu Korban Kebakaran Jalan Kangkung</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 22 Agustus 2017 13:15 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kota-jakarta-selatan-bantu-korban-kebakaran-jalan-kangkung">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/08/22/pmi-kota-jakarta-selatan-bantu-korban-kebakaran-jalan-kangkung_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pengurus-pmi-dki-jakarta-melakukan-audiensi-dengan-gubernur-dki">PENGURUS PMI DKI JAKARTA MELAKUKAN AUDIENSI DENGAN GUBERNUR DKI</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 16 Agustus 2017 13:11 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pengurus-pmi-dki-jakarta-melakukan-audiensi-dengan-gubernur-dki">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/08/16/pengurus-pmi-dki-jakarta-melakukan-audiensi-dengan-gubernur-dki_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/wakil-ketua-bidang-penanggulangan-bencana-meletakkan-batu-pertama-pada-rth-ruang-terbuka-hijau-rw013-pademangan-barat">Wakil Ketua Bidang Penanggulangan Bencana Meletakkan Batu Pertama Pada RTH (Ruang Terbuka Hijau) Rw.013 Pademangan Barat</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 31 Juli 2017 09:08 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/wakil-ketua-bidang-penanggulangan-bencana-meletakkan-batu-pertama-pada-rth-ruang-terbuka-hijau-rw013-pademangan-barat">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/07/31/gurhadi-kartasasnita-meletakkan-batu-pertama-di-rth-ruang-terbuka-hijau-di-rw013-pademangan-barat_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pengurus-pmi-dki-jakarta-dapatkan-sosialisasi-kepalangmerahan">PENGURUS PMI DKI JAKARTA DAPATKAN SOSIALISASI KEPALANGMERAHAN</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 19 Juli 2017 15:50 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pengurus-pmi-dki-jakarta-dapatkan-sosialisasi-kepalangmerahan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/07/19/pmi-dki-jakarta-selenggarakanorientasi-kepalangmerahan-bagi-pengurus-baru-masa-bakti-2017-2022_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/halal-bihalal-ketua-pmi-dki-minta-kinerja-karyawan-ditingkatkan">Halal Bihalal, Ketua PMI DKI Minta Kinerja Karyawan Ditingkatkan</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 13 Juli 2017 15:59 WIB</li>
+							</ul>
+							<div class="main-text">DKI JAKARTA - Palang Merah Indonesia  Provinsi DKI Jakarta mengadakan acara Halal Bihalal yang diadakan di Markas Daerah PMI DKI Jakarta di Jalan Keramat Raya No. 47, Senin, Jakarta Pusat, Kamis (13/07).</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/halal-bihalal-ketua-pmi-dki-minta-kinerja-karyawan-ditingkatkan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/07/13/halal-bihalal-ketua-pmi-dki-minta-kinerja-karyawan-ditingkatkan_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jakut-serahkan-bantuan-gerobak-motor">PMI Jakut Serahkan Bantuan Gerobak Motor</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 12 Juli 2017 17:14 WIB</li>
+							</ul>
+							<div class="main-text">Jakarta Utara (12/07/2017) - PMI Kota Jakarta Utara menyerahkan gerobak motor (Germor) kepada tiga RW di wilayah Kota Administrasi Jakarta Utara. Acara dihadiri Walikota Jakarta Utara Wahyu Heryadi, Sekretaris PMI DKI Jakarta Asep Djuanda, dan Ketua PMI Jakarta Utara Sabri Saiman. </div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jakut-serahkan-bantuan-gerobak-motor">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/07/12/pmi-jakut-serahkan-bantuan-gerobak-motor_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jakpus-bantu-kebakaran-di-jalan-kembang-sepatu">PMI Jakpus Bantu Kebakaran di Jalan Kembang Sepatu</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 8 Juli 2017 19:00 WIB</li>
+							</ul>
+							<div class="main-text">Jakarta Pusat (08/07/2017) - PMI Kota Jakarta Pusat membantu korban kebakaran yang terjadi di Gang Anggrek, Jalan Kembang Sepatu, Kelurahan Kramat, Kecamatan Senin, Jakarta Pusat, Sabtu (08/07).</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jakpus-bantu-kebakaran-di-jalan-kembang-sepatu">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/07/10/pmi-jakpus-bantu-kebakaran-di-jalan-kembang-sepatu_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/berita-foto-pt-kalbe-farma-beri-bantuan-obat-tetes-mata-pada-pmi-dki-jakarta">Berita Foto : PT Kalbe Farma Beri Bantuan Obat Tetes Mata pada PMI DKI Jakarta</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 22 Juni 2017 15:08 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/berita-foto-pt-kalbe-farma-beri-bantuan-obat-tetes-mata-pada-pmi-dki-jakarta">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/22/berita-foto--pt-kalbe-farma-beri-bantuan-obat-tetes-mata-pada-pmi-dki-jakarta_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/stok-darah-cukup-selama-bulan-puasa-pmi-dki-jakarta-atasi-menipisnya-stok-darah-usai-lebaran">Stok Darah Cukup Selama Bulan Puasa *PMI DKI Jakarta Atasi  Menipisnya Stok Darah Usai Lebaran*</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 22 Juni 2017 15:05 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/stok-darah-cukup-selama-bulan-puasa-pmi-dki-jakarta-atasi-menipisnya-stok-darah-usai-lebaran">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/22/stok-darah-cukup-selama-bulan-puasa-pmi-dki-jakarta-atasi--menipisnya-stok-darah-usai-lebaran_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/berita-foto-bapak-muhammad-ali-reza-meninjau-pos-pp-pmi-yang-disediakan-di-wilayah-ibukota">Berita Foto : Bapak Muhammad Ali Reza Meninjau Pos PP PMI Yang Disediakan di Wilayah Ibukota</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 22 Juni 2017 08:44 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/berita-foto-bapak-muhammad-ali-reza-meninjau-pos-pp-pmi-yang-disediakan-di-wilayah-ibukota">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/22/berita-foto--bapak-muhammad-ali-reza-meninjau-pos-pp-pmi-yang-disediakan-di-wilayah-ibukota_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/berita-foto-ketua-pmi-dki-jakarta-bapak-muhammad-ali-reza-meninjau-pos-pp-di-terminal-kprambutan">Berita Foto : Ketua PMI DKI Jakarta, Bapak Muhammad Ali Reza Meninjau Pos PP di Terminal Kp.Rambutan</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 22 Juni 2017 08:35 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/berita-foto-ketua-pmi-dki-jakarta-bapak-muhammad-ali-reza-meninjau-pos-pp-di-terminal-kprambutan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/22/berita-foto--ketua-pmi-bapak-muhammad-ali-reza-meninjau-pos-pp-di-terminal-kprambutan_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-jakarta-siapkan-posko-kesehatan-mudik-lebaran-di-seluruh-wilayah-ibukota">PMI DKI Jakarta Siapkan Posko Kesehatan Mudik Lebaran di Seluruh Wilayah Ibukota</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 22 Juni 2017 01:43 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-jakarta-siapkan-posko-kesehatan-mudik-lebaran-di-seluruh-wilayah-ibukota">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/22/pmi-dki-jakarta-siapkan-posko-kesehatan-mudik-lebaran-di-seluruh-wilayah-ibukota_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bantu-pemudik-pmi-dki-jakarta-berikan-layanan-pertolongan-pertama-dan-layanan-ambulan-24-jam">Bantu Pemudik, PMI DKI Jakarta Berikan Layanan Pertolongan Pertama dan Layanan Ambulan 24 Jam</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 19 Juni 2017 14:17 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bantu-pemudik-pmi-dki-jakarta-berikan-layanan-pertolongan-pertama-dan-layanan-ambulan-24-jam">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/19/bantu-pemudik-pmi-dki-jakarta-berikan-layanan-pertolongan-pertama-dan-layanan-ambulan-24-jam_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jakarta-santuni-250-anak-yatim-di-pulau-harapan-dan-pulau-kelapa">PMI Jakarta Santuni 250 Anak Yatim di Pulau Harapan dan Pulau Kelapa</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 19 Juni 2017 12:59 WIB</li>
+							</ul>
+							<div class="main-text">Bulan Ramadhan ini, Palang Merah Indonesia (PMI) Provisi DKI Jakarta memberikan santunan uang dan paket sembako kepada 250 yatim piatu di Pulau Harapan dan Pulau Kelapa, Kepulauan Seribu Utara. Bantuan ini dimaksudkan untuk membantu warga kurang mampu.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jakarta-santuni-250-anak-yatim-di-pulau-harapan-dan-pulau-kelapa">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/19/pmi-jakarta-santuni-250-anak-yatim-di-pulau-harapan-dan-pulau-kelapa_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/250-paket-sembako-diberikan-pmi-kota-jakarta-barat">250 Paket Sembako diberikan PMI Kota Jakarta Barat</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 16 Juni 2017 19:50 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/250-paket-sembako-diberikan-pmi-kota-jakarta-barat">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/16/250-paket-sembako-diberikan-pmi-kota-jakarta-barat_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-gelar-apel-siaga-lebaran-2017">PMI Gelar Apel Siaga Lebaran 2017</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 15 Juni 2017 13:59 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-gelar-apel-siaga-lebaran-2017">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/15/pmi-gelar-apel-siaga-lebaran-2017_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/ramadhan-1438-h-pmi-kota-jakarta-selatan-berbagi-bersama-anak-yatim-dan-dhuafa">Ramadhan 1438 H PMI Kota Jakarta Selatan berbagi bersama Anak Yatim dan Dhuafa </a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 15 Juni 2017 10:59 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/ramadhan-1438-h-pmi-kota-jakarta-selatan-berbagi-bersama-anak-yatim-dan-dhuafa">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/15/ramadhan-1438-h-pmi-kota-jakarta-selatan-berbagi-bersama-anak-yatim-dan-dhuafa-_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kota-jakarta-timur-akan-memiliki-unit-tranfusi-darah">PMI KOTA JAKARTA TIMUR AKAN MEMILIKI UNIT TRANFUSI DARAH</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 9 Juni 2017 10:52 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kota-jakarta-timur-akan-memiliki-unit-tranfusi-darah">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/09/pmi-kota-jakarta-timur-akan-memiliki-unit-tranfusi-darah_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/jelang-berbuka-puasa-pmi-dki-jakarta-bagi-takjil-kepada-pengendara">JELANG BERBUKA PUASA, PMI DKI JAKARTA BAGI TAKJIL KEPADA PENGENDARA</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 9 Juni 2017 07:17 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/jelang-berbuka-puasa-pmi-dki-jakarta-bagi-takjil-kepada-pengendara">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/09/jelang-berbuka-puasa-pmi-dki-jakarta-bagi-takjil-kepada-pengendara_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/ketua-pmi-dki-hadiri-bhakti-ramadhan-di-pmi-jakpus">Ketua PMI DKI Hadiri Bhakti Ramadhan di PMI Jakpus</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 2 Juni 2017 16:58 WIB</li>
+							</ul>
+							<div class="main-text">Ketua PMI DKI Jakarta Muahammad Ali Reza menghadiri acara Bhakti Ramadhan dan Buka Puasa Bersama yang diselenggarakan PMI Kota Jakarta Pusat di Jalan Pecenongan No 82, Gambir, Jakarta Pusat, Kamis 1 Juni 2017. turut hadir dalam kegiatan itu, Walikota Jakarta Pusat Mangara Pardede, Ketua PMI Kota dan sejumlah undangan lainnya.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/ketua-pmi-dki-hadiri-bhakti-ramadhan-di-pmi-jakpus">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/06/02/ketua-pmi-dki-hadiri-bhakti-ramadhan-di-pmi-jakpus_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/berita-foto-pmi-respon-bom-kampung-melayu"> Berita Foto : PMI Respon Bom Kampung Melayu</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 25 Mei 2017 16:27 WIB</li>
+							</ul>
+							<div class="main-text">Tim Relawan Palang Merah Indonesia (PMI) merespon ledakan bom di Halte Bus Transjakarta Kampung Melayu, Jakarta Timur, (24/5) dengan memobilisasi 38 orang personil ke lokasi, empat ambulance dan tiga mobil jenazah dari PMI Jakarta Pusat, PMI Jakarta Utara, PMI Jakarta Timur, PMI Jakarta Barat, dan PMI Jakarta Selatan.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/berita-foto-pmi-respon-bom-kampung-melayu">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/25/-berita-foto--pmi-respon-bom-kampung-melayu_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/berita-foto-relawan-posko-pmi-jakbar-layani-warga-kurang-mampu">Berita Foto : Relawan Posko PMI Jakbar Layani Warga Kurang Mampu</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 24 Mei 2017 15:50 WIB</li>
+							</ul>
+							<div class="main-text">PMI JAKARTA BARAT - Tim Relawan Posko PMI Kota Jakarta Barat melayani evakuasi pasien kurang mampu, Rabu (24/5).</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/berita-foto-relawan-posko-pmi-jakbar-layani-warga-kurang-mampu">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/24/berita-foto--relawan-posko-pmi-jakbar-layani-warga-kurang-mampu_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/berita-foto-relawan-pmi-jaksel-obati-luka-pemadam-kebakaran"> Berita Foto : Relawan PMI Jaksel Obati Luka Pemadam Kebakaran</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 22 Mei 2017 18:29 WIB</li>
+							</ul>
+							<div class="main-text">PMI JAKARTA SELATAN - Relawan PMI Kota Jakarta Selatan mengobati luka yang dialami Petugas Pemadam Kebakaran saat penanggulangan kebakaran di Jalan Buncit 8C, Mampang Prapatan, Jakarta Selatan, Minggu (21/5).</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/berita-foto-relawan-pmi-jaksel-obati-luka-pemadam-kebakaran">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/22/-berita-foto--relawan-pmi-jaksel-obati-luka-pemadam-kebakaran_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bentuk-karakter-peduli-pmi-jaktim-gelar-capacity-building">Bentuk Karakter Peduli, PMI Jaktim Gelar Capacity Building </a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 21 Mei 2017 16:59 WIB</li>
+							</ul>
+							<div class="main-text">PMI JAKARTA TIMUR - Palang Merah Indonesia (PMI) Kota Jakarta Timur menggelar Capacity Building untuk Pengurus Kota dan Kecamatan serta Kepala Seksi Kesejahteraan Rakyat Kelurahan di Lingkungan Wilayah Kota Jakarta Timur. Kegiatan dilaksanakan di Hotel Yasmin, Cipanas, Jawa Barat pada 20-21 Mei 2017.
+</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bentuk-karakter-peduli-pmi-jaktim-gelar-capacity-building">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/22/bentuk-karakter-peduli-pmi-jaktim-gelar-capacity-building-_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jaktim-siagakan-ambulance-di-kebakaran-klender-dan-ciracas"> PMI Jaktim Siagakan Ambulance di Kebakaran Klender dan Ciracas</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 19 Mei 2017 14:27 WIB</li>
+							</ul>
+							<div class="main-text">PMI JAKARTA TIMUR - Palang Merah Indonesia (PMI) Kota Jakarta Timur menyiagakan Tim Ambulance di lokasi kebakaran Stasiun Klender, Jalan I Gusti Ngurah Rai, Klender yang terjadi sekita pukul 07.30 WIB dan Pabrik Kasur di Jalan Tanah Merdeka, Susukan, Ciracas, Jakarta Timur sekitar pukul 09.40 WIB, Jumat (19/5).</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jaktim-siagakan-ambulance-di-kebakaran-klender-dan-ciracas">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/19/-pmi-jaktim-siagakan-ambulan-di-kebakaran-klender-dan-ciracas_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bengkel-terbakar-pmi-jaksel-kerahkan-bantuan-ambulance"> Bengkel Terbakar, PMI Jaksel Kerahkan Bantuan Ambulance</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 19 Mei 2017 09:10 WIB</li>
+							</ul>
+							<div class="main-text">PMI JAKARTA SELATAN - Bengkel mobil Berlian Motor di Ralan Raya Pasar Minggu, Jakarta Selatan terbakar sekitar pukul 23.30 malam, Kamis (18/5). PMI Kota Jakarta Selatan mengerahkan satu unit ambulance dan dua unit quick respon. </div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bengkel-terbakar-pmi-jaksel-kerahkan-bantuan-ambulance">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/19/-bengkel-terbakar-pmi-jaksel-kerahkan-bantuan-ambulance_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/peserta-pelatihan-jurnalistik-dan-fotografi-pmi-jakbar-bermanfaat">Peserta : Pelatihan Jurnalistik dan Fotografi PMI Jakbar Bermanfaat</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 18 Mei 2017 17:17 WIB</li>
+							</ul>
+							<div class="main-text">PMI JAKARTA BARAT - Pelatihan Jurnalistik dan Fotografi yang digelar Palang Merah Indonesia (PMI) Kota Jakarta Barat di Megamendung, Jawa Barat, diapresiasi positif oleh sejumlah peserta. Mereka mengaku pengetahuan jurnalistik dan fotografi yang disampaikan bermanfaat. </div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/peserta-pelatihan-jurnalistik-dan-fotografi-pmi-jakbar-bermanfaat">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/18/peserta--pelatihan-jurnalistik-dan-fotografi-pmi-jakbar-bermanfaat_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/30-guru-di-jaktim-ikuti-diklat-pembina-pmr">30 Guru di Jaktim Ikuti Diklat Pembina PMR</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 18 Mei 2017 15:45 WIB</li>
+							</ul>
+							<div class="main-text">PMI JAKARTA TIMUR - Sebanyak 30 guru dari sejumlah sekolah di Kota Jakarta Timur mengikuti Pendidikan dan Pelatihan Pembina Palang Merah Remaja (PMR). Kegiatan yang dilaksanakan PMI Kota Jakarta Timur ini diagendakan berlangsung 18-21 Mei 2017 bertempat di Cisarua, Bogor, Jawa Barat.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/30-guru-di-jaktim-ikuti-diklat-pembina-pmr">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/18/30-guru-di-jaktim-ikuti-diklat-pembina-pmr_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/difabel-di-dki-disosialisasikan-tangguh-bencana">Difabel di DKI Disosialisasikan Tangguh Bencana</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 18 Mei 2017 14:11 WIB</li>
+							</ul>
+							<div class="main-text">DKI JAKARTA - Untuk mengurangi risiko bencana terhadap penyandang difabel, Badan Penanggulangan Bencana Daerah (BPBD) DKI Jakarta bersama Palang Merah Indonesia (PMI) DKI Jakarta mengadakan sosialisasi pengurangan risiko bencana bagi penyandang difabel di sejumlah Sekolah Luar Biasa (SLB) se Provinsi DKI Jakarta. </div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/difabel-di-dki-disosialisasikan-tangguh-bencana">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/18/-bersama-bpbd-pmi-dki-sosialisasikan-pengurangi-risiko-terhadap-difabel_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/relawan-dibekali-pelatihan-jurnalistik-dan-fotografi"> Relawan Dibekali Pelatihan Jurnalistik dan Fotografi</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 17 Mei 2017 17:28 WIB</li>
+							</ul>
+							<div class="main-text">JAKARTA BARAT - Untuk menunjang publikasi program kepalangmerahan, Palang Merah Indonesia (PMI) Kota Jakarta Barat membekali relawannya dengan Pelatihan Jurnalistik dan Fotografi. Pelatihan yang diikuti sebanyak 30 peserta ini dilaksanakan pada 16-20 Mei 2017 di Puncak, Bogor, Jawa Barat.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/relawan-dibekali-pelatihan-jurnalistik-dan-fotografi">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/17/-relawan-dibekali-pelatihan-jurnalistik-dan-fotografi_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/karyawan-pt-kalog-minta-pelatihan-pp-tiap-tahun"> Karyawan PT KALOG Minta Pelatihan PP Tiap Tahun</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 16 Mei 2017 18:14 WIB</li>
+							</ul>
+							<div class="main-text">DKI JAKARTA - Pelatihan Pertolongan Pertama yang dilaksanakan PT Kereta Api Logistik (KALOG) bersama PMI Provinsi DKI Jakarta disambut baik oleh sejumlah peserta. Mereka berharap pelatihan tersebut dilaksanakan tiap tahun dan berjenjang.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/karyawan-pt-kalog-minta-pelatihan-pp-tiap-tahun">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/16/-karyawan-pt-kalog-minta-pelatihan-pp-tiap-tahun_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jakpus-siapkan-kegiatan-aneka-lomba-pmr"> PMI Jakpus Siapkan Kegiatan Aneka Lomba PMR</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 16 Mei 2017 16:20 WIB</li>
+							</ul>
+							<div class="main-text">JAKARTA PUSAT - Palang Merah Indonesia (PMI) Kota Jakarta Pusat akan melaksanakan kegiatan aneka lomba bagi Palang Merah Remaja (PMR) se-Jakarta Pusat. Hal itu, disampaikan Ketua PMI Kota Jakarta Pusat H. Soewardi Sulaiman saat menghadiri Acara Sukuran Hari Lahir Ketua PMI Provinsi DKI Jakarta Muhammad Ali Reza di Gedung Granadi, Kuningan, Jakarta Selatan, Selasa (16/5).</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jakpus-siapkan-kegiatan-aneka-lomba-pmr">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/16/-pmi-jakpus-siapkan-kegiatan-aneka-lomba-pmr_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/30-karyawan-pt-kalog-dilatih-pp"> 30 Karyawan PT KALOG Dilatih PP</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 16 Mei 2017 14:50 WIB</li>
+							</ul>
+							<div class="main-text">Sebanyak 30 karyawan PT Kereta Api Logistik (KALOG) mengikuti Pelatihan Pertolongan Pertama (PP). Kegiatan dilaksanakan di Ruang Pelatihan Gedung PMI Provinsi DKI Jakarta, Jalan Keramat Raya No. 47, Senin, Jakarta Pusat pada 15-16 Mei 2017.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/30-karyawan-pt-kalog-dilatih-pp">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/16/-30-karyawan-pt-kal-dilatih-pp_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jaktim-akan-gelar-capacity-building-bagi-pengurus-pmi-kecamatan"> PMI Jaktim akan Gelar Capacity Building bagi Pengurus PMI Kecamatan</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 15 Mei 2017 19:17 WIB</li>
+							</ul>
+							<div class="main-text">Palang Merah Indonesia (PMI) Kota Jakarta Timur akan menggelar program Capacity Building bagi pengurus PMI Kecamatan se-Jakarta Timur. Kegiatan akan diikuti sebanyak 85 peserta dan dilaksanakan selama dua hari pada 20-21 Mei 2017 mendatang.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jaktim-akan-gelar-capacity-building-bagi-pengurus-pmi-kecamatan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/15/-pmi-jaktim-akan-gelar-capacity-building-bagi-pengurus-pmi-kecamatan_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/kebakaran-pejaten-pmi-jaksel-kerahkan-relawan"> Kebakaran Pejaten, PMI Jaksel Kerahkan Relawan</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 14 Mei 2017 17:55 WIB</li>
+							</ul>
+							<div class="main-text">Untuk menanggulangi Kebakaran yang melanda dua rumah warga di Jalan Samali Ujung, Pejaten Indah II, Pejaten, Pasar Minggu, Jaksel, Palang Merah Indonesia (PMI) Kota Jakarta Selatan mengerahkan satu tim relawan. Mereka dilengkapi satu unit mobil ambulan dan dua unit quick respon.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/kebakaran-pejaten-pmi-jaksel-kerahkan-relawan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/15/-kebakaran-pejaten-pmi-jaksel-kerahkan-relawan_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jaksel-gelar-refresh-anggota-sibat">PMI Jaksel Gelar Refresh Anggota Sibat</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 11 Mei 2017 17:00 WIB</li>
+							</ul>
+							<div class="main-text">Palang Merah Indonesia (PMI) Kota Jakarta Selatan menggelar Program Refresh Anggota Siaga Bencana Berbasis Masyarakat (Sibat), Kamis (11/5) di Balai Arimbi, Bogor, Jawa Barat. Program Community Flood Resilience (CFR) yang didukung penuh oleh Zurich Insurance ini diikuti 45 peserta dari anggota Sibat se-Kota Jakarta Selatan.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-jaksel-gelar-refresh-anggota-sibat">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/12/pmi-jaksel-gelar-refresh-anggota-sibat_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/25-guru-di-jakbar-ikuti-pelatihan-pembina-pmr">25 Guru di Jakbar Ikuti Pelatihan Pembina PMR </a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 10 Mei 2017 14:30 WIB</li>
+							</ul>
+							<div class="main-text">Sebanyak 25 peserta dari sejumlah sekolah di Jakarta Barat mengikuti Pelatihan Guru Pembina Palang Merah Remaja (PMR). Kegiatan yang dilaksanakan PMI Kota Jakarta Barat ini berlangsung empat hari sejak 10-14 Mei 2017 di Hotel Ayudia 2, Bogor, Jawa Barat,</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/25-guru-di-jakbar-ikuti-pelatihan-pembina-pmr">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/15/pelatihan-guru-pembina-pmr-jakarta-barat_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/jusuf-kalla-lantik-pengurus-pmi-dki-2017-2022">Jusuf Kalla Lantik Pengurus PMI DKI 2017-2022</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 8 Mei 2017 13:49 WIB</li>
+							</ul>
+							<div class="main-text">Ketua Palang Merah Indonesia (PMI) Provinsi DKI Jakarta terpilih pada Musyawarah Provinsi (Musprov) PMI Provinsi Jakarta 11 April 2017 lalu, Muhammad Ali Reza dilantik Ketua Umum PMI Pusat, Jusuf Kalla, Senin (8/5) di Aula PMI Provinsi DKI Jakarta, Jalan Kramat Raya 47 Jakarta Pusat.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/jusuf-kalla-lantik-pengurus-pmi-dki-2017-2022">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/12/jusuf-kalla-lantik-pengurus-pmi-dki-2017-2022_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-gelar-musyawarah-provinsi-tahun-2017">PMI DKI Gelar Musyawarah Provinsi Tahun 2017</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 3 Mei 2017 10:33 WIB</li>
+							</ul>
+							<div class="main-text">Untuk memenuhi ketentuan Anggaran Dasar PMI, Palang Merah Indonesia Provinsi DKI Jakarta berkewajiban untuk mempertanggungjawabkan pelaksanaan tugasnya pada Musyawarah Provinsi (Musprov). Untuk itu, PMI Provinsi DKI Jakarta menggelar Musprov ke-11 Tahun 2017, sesuai dengan Program PMI DKI Jakarta tahun 2012-2017 dan Rencana Strategis PMI tahun 2014-2019.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-gelar-musyawarah-provinsi-tahun-2017">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/05/03/pmi-dki-gelar-musyawarah-provinsi-tahun-2017_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/peresmian-sub-unit-transfusi-darah-pmi-kota-jakarta-barat">Peresmian Sub Unit Transfusi Darah PMI Kota Jakarta Barat</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 27 Maret 2017 08:41 WIB</li>
+							</ul>
+							<div class="main-text">&#x201C;Keberadaan Sub UTD PMI Kota Jakarta Barat bisa mengefisienkan penjemputan darah. Rumah Sakit di wilayah Jakarta Barat bisa mengambil darah di Sub UTD PMI Kota Jakarta Barat,&#x201D; terang Rini Sutiyoso.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/peresmian-sub-unit-transfusi-darah-pmi-kota-jakarta-barat">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/03/27/peresmian-sub-unit-transfusi-darah-pmi-kota-jakarta-barat_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/capaian-bulan-dana-pmi-naik-sembilan-puluh-lima-persen"> CAPAIAN BULAN DANA PMI NAIK SEMBILAN PULUH LIMA PERSEN</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 24 Maret 2017 09:40 WIB</li>
+							</ul>
+							<div class="main-text">Perolehan Bulan Dana PMI 2016/2017 mencapai Rp. 10.841.890.332,- atau mengalami kenaikan sebesar 95% dari tahun sebelumnya yaitu Rp. 5.221.120.000,-.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/capaian-bulan-dana-pmi-naik-sembilan-puluh-lima-persen">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/03/24/-capaian-bulan-dana-pmi-naik-sembilan-puluh-lima-persen_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pelantikan-pengurus-kecamatan-pmi-kota-jakarta-selatan">Pelantikan Pengurus Kecamatan PMI Kota Jakarta Selatan </a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 2 Maret 2017 13:56 WIB</li>
+							</ul>
+							<div class="main-text">Anggaran kegiatan Tahun 2017 agar dibuatkan program yang langsung menyentuh masyarakat. </div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pelantikan-pengurus-kecamatan-pmi-kota-jakarta-selatan">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/03/02/pelantikan-pengurus-kecamatan-pmi-kota-jakarta-selatan-_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-selenggarakan-mukernas-dan-penyematan-satyalencana-dds-100-kali">PMI Selenggarakan MUKERNAS dan Penyematan Satyalencana DDS 100 Kali</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 24 Februari 2017 08:56 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-selenggarakan-mukernas-dan-penyematan-satyalencana-dds-100-kali">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/02/24/pmi-selenggarakan-mukernas-dan-penyematan-satyalencana-dds-100-kali_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pelantikan-pengurus-kabupaten-dan-dewan-kehormatan-pmi-kepulauan-seribu-periode-2017-2022">Pelantikan Pengurus Kabupaten dan Dewan Kehormatan PMI Kepulauan Seribu periode 2017-2022</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 23 Februari 2017 16:25 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pelantikan-pengurus-kabupaten-dan-dewan-kehormatan-pmi-kepulauan-seribu-periode-2017-2022">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/02/23/pelantikan-pengurus-kabupaten-dan-dewan-kehormatan-pmi-kepulauan-seribu-periode-2017-2022_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pelantikan-pengurus-pmi-kota-jakarta-utara-masa-bakti-2017-2022">PELANTIKAN PENGURUS PMI KOTA JAKARTA UTARA MASA BAKTI 2017 &#x2013; 2022</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 8 Februari 2017 14:29 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pelantikan-pengurus-pmi-kota-jakarta-utara-masa-bakti-2017-2022">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/02/08/pelantikan-pengurus-pmi-kota-jakarta-utara-masa-bakti-2017--2022_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/tingkatkan-kesadaran-stackeholder-pmi-dki-jakarta-adakan-pelatihan-networking-social-campaign">TINGKATKAN KESADARAN STACKEHOLDER, PMI DKI JAKARTA ADAKAN PELATIHAN NETWORKING &amp; SOCIAL CAMPAIGN</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 20 Januari 2017 13:40 WIB</li>
+							</ul>
+							<div class="main-text"></div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/tingkatkan-kesadaran-stackeholder-pmi-dki-jakarta-adakan-pelatihan-networking-social-campaign">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/01/20/tingkatkan-kesadaran-stackeholder-pmi-dki-jakarta-adakan-pelatihan-networking--social-campaign_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/65-sr-guncang-kabupaten-pidie-jaya-aceh">6.5 SR Guncang Kabupaten Pidie Jaya, Aceh</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 30 Desember 2016 10:35 WIB</li>
+							</ul>
+							<div class="main-text">Akibat gempa bumi tektinik kekuatan 6,5 SR di wilayah Kabupaten Pidie Jaya, Aceh, mengakibatkan 20 orang meninggal dunia dan sejumlah rumah roboh.
+
+
+Berdasarkan informasi dari Kepala Palang Merah Indonesia (PMI) Aceh Rudianto, hingga saat ini sebanyak 20 orang meninggal dunia dan puluhan orang mengalami luka-luka.</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/65-sr-guncang-kabupaten-pidie-jaya-aceh">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2016/12/30/65-sr-guncang-kabupaten-pidie-jaya-aceh_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-evakuasi-korban-ledakan-bom-di-thamrin">PMI Evakuasi Korban Ledakan Bom di Thamrin</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 1 Februari 2016 02:00 WIB</li>
+							</ul>
+							<div class="main-text">Telah terjadi ledakan bom  di perempatan Pos Polisi Sarinah dan Cafe Starbucks Jakarta yang terletak di JL. MH Thamrin &#x2013; Jakarta Pusat pada pukul 10:55 WIB. Kamis (14/1).</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-evakuasi-korban-ledakan-bom-di-thamrin">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2016/01/19/pmi-evakuasi-korban-ledakan-bom-di-thamrin_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/sarasehan-pmi-dki-jakarta-bareng-blogger">Sarasehan PMI DKI Jakarta Bareng Blogger</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 11 Januari 2016 09:15 WIB</li>
+							</ul>
+							<div class="main-text">Mengawali kegiatan tahun 2016, Palang Merah Indonesia (PMI) Provinsi DKI Jakarta menyelenggarakan sarasehan bersama 25 blogger yang tergabung di dalam Blogger TDB (Tau Dari Blogger), Minggu (10/1).</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/sarasehan-pmi-dki-jakarta-bareng-blogger">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2016/01/19/sarasehan-pmi-dki-jakarta-bareng-blogger_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="news">
+						<div class="np-text">
+							<div class="main-textm"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kampanyekan-peduli-hivaids-pada-cfd">PMI Kampanyekan Peduli HIV/AIDS pada CFD</a></div>
+							<ul class="konten-meta">
+								<li><i class="icons icon-clock"></i> 6 Januari 2016 08:00 WIB</li>
+							</ul>
+							<div class="main-text">Palang Merah Indonesia (PMI) bekerjasama dengan Yayasan Pelita Ilmu, Dance 4 Life, dan Indonesia Car Free Day menggelar kegiatan &#x201C;Celebrate&#x201D; di Senayan &#x2013; Jakarta sebagai puncak peringatan Hari AIDS Sedunia (HAS) yang jatuh pada tanggal 1 Desember. Minggu (20/11).</div>
+						</div>
+						<div class="np-img">
+							<a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-kampanyekan-peduli-hivaids-pada-cfd">
+								<img src="http://dki-jakarta.pmi.or.id/upload/konten/2016/01/19/pmi-kampanyekan-peduli-hivaids-pada-cfd_small.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="main-line"></div>
+										<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="right-content">
+			<br>	
+			<div class="sidebar">
+				<div class="sidebar-title"><span>CARI BERITA DAN PERISTIWA</span></div>
+				<div class="sidebar-content">
+					<form action="" method="post">
+						<input type="text" name="key" id="key" value="" class="search-inp" placeholder="Pencarian">&#xA0;
+						<input type="hidden" name="cat_id" id="cat_id" value="2">
+						<input type="button" id="filter" value="Cari" class="search-btn">
+					</form>
+					<br>
+				</div>
+			</div>
+
+			<div class="sidebar">
+				<div class="sidebar-title"><span>BERITA DAN PERISTIWA TERKINI</span></div>
+				<div class="sidebar-content">
+										<div class="more-news-content">
+						<div class="more-news-img"><img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/10/12/indonesia-indonesia-red-cross-disaster-response-team-from-dki-jakarta-chapter-makes-26-hour-journey-to-palu-to-begin-initial-disaster-response-activities_small.jpg"></div>
+						<div class="more-news-title"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/indonesia-indonesia-red-cross-disaster-response-team-from-dki-jakarta-chapter-makes-26-hour-journey-to-palu-to-begin-initial-disaster-response-activities">Indonesia: Indonesia Red Cross Disaster Response Team from DKI Jakarta Chapter Makes 26-Hour Journey to Palu to Begin Initial Disaster Response Activities</a></div>
+						<ul class="konten-meta">
+							<li><i class="icons icon-clock"></i> 12 Oktober 2018 09:35 WIB</li>
+						</ul>
+						<div class="clear"></div>
+					</div>			
+										<div class="more-news-content">
+						<div class="more-news-img"><img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/10/03/pmi-dki-kirim-bantuan-untuk-gempa-dan-tsunami-palu-dan-donggala_small.jpg"></div>
+						<div class="more-news-title"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-dki-kirim-bantuan-untuk-gempa-dan-tsunami-palu-dan-donggala">PMI DKI Kirim Bantuan untuk Gempa dan Tsunami Palu dan Donggala</a></div>
+						<ul class="konten-meta">
+							<li><i class="icons icon-clock"></i> 3 Oktober 2018 19:19 WIB</li>
+						</ul>
+						<div class="clear"></div>
+					</div>			
+										<div class="more-news-content">
+						<div class="more-news-img"><img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/09/28/bca-donasikan-4-set-blood-scale--mixer-kepada-pmi-dki-jakarta_small.jpg"></div>
+						<div class="more-news-title"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/bca-donasikan-4-set-blood-scale-mixer-kepada-pmi-dki-jakarta">BCA Donasikan 4 Set Blood Scale &amp; Mixer Kepada PMI DKI Jakarta</a></div>
+						<ul class="konten-meta">
+							<li><i class="icons icon-clock"></i> 24 September 2018 15:08 WIB</li>
+						</ul>
+						<div class="clear"></div>
+					</div>			
+										<div class="more-news-content">
+						<div class="more-news-img"><img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/09/18/organisasi-pmi-merupakan-lembaga-terdepan-dalam-hal-kemanusiaan_small.jpg"></div>
+						<div class="more-news-title"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/menteri-sosial-agus-gumiwang-kartasasmita-membuka-acara-temu-karya-relawan-pmi-tingkat-nasional-vi-di-waduk-jatiluhur-purwakarta">Menteri Sosial Agus Gumiwang Kartasasmita Membuka Acara Temu Karya Relawan PMI Tingkat Nasional VI di Waduk Jatiluhur - Purwakarta</a></div>
+						<ul class="konten-meta">
+							<li><i class="icons icon-clock"></i> 18 September 2018 08:09 WIB</li>
+						</ul>
+						<div class="clear"></div>
+					</div>			
+										<div class="more-news-content">
+						<div class="more-news-img"><img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/08/31/anies-rasyid-baswedan-kukuhkan-panitia-bulan-dana-pmi-tahun-2018-di-balai-kota_small.jpg"></div>
+						<div class="more-news-title"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/anies-rasyid-baswedan-kukuhkan-panitia-bulan-dana-pmi-dki-jakarta-tahun-2018-di-balai-kota">Anies Rasyid Baswedan Kukuhkan Panitia Bulan Dana PMI DKI Jakarta Tahun 2018 di Balai Kota </a></div>
+						<ul class="konten-meta">
+							<li><i class="icons icon-clock"></i> 31 Agustus 2018 17:19 WIB</li>
+						</ul>
+						<div class="clear"></div>
+					</div>			
+									</div>
+			</div>
+
+			<div class="sidebar">
+				<div class="sidebar-title"><span>BERITA DAN PERISTIWA POPULER</span></div>
+				<div class="sidebar-content">
+										<div class="more-news-content">
+						<div class="more-news-img"><img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/03/02/pelantikan-pengurus-kecamatan-pmi-kota-jakarta-selatan-_small.jpg"></div>
+						<div class="more-news-title"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pelantikan-pengurus-kecamatan-pmi-kota-jakarta-selatan">Pelantikan Pengurus Kecamatan PMI Kota Jakarta Selatan </a></div>
+						<ul class="konten-meta">
+							<li><i class="icons icon-clock"></i> 2 Maret 2017 13:56 WIB</li>
+						</ul>
+						<div class="clear"></div>
+					</div>			
+										<div class="more-news-content">
+						<div class="more-news-img"><img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/12/05/walikota-jakarta-selatan-lantik-2100-anak-pmr_small.jpg"></div>
+						<div class="more-news-title"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/walikota-jakarta-selatan-lantik-2100-anak-pmr">Walikota Jakarta Selatan Lantik 2.100 Anak PMR</a></div>
+						<ul class="konten-meta">
+							<li><i class="icons icon-clock"></i> 5 Desember 2017 09:10 WIB</li>
+						</ul>
+						<div class="clear"></div>
+					</div>			
+										<div class="more-news-content">
+						<div class="more-news-img"><img src="http://dki-jakarta.pmi.or.id/upload/konten/2017/02/08/pelantikan-pengurus-pmi-kota-jakarta-utara-masa-bakti-2017--2022_small.jpg"></div>
+						<div class="more-news-title"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pelantikan-pengurus-pmi-kota-jakarta-utara-masa-bakti-2017-2022">PELANTIKAN PENGURUS PMI KOTA JAKARTA UTARA MASA BAKTI 2017 &#x2013; 2022</a></div>
+						<ul class="konten-meta">
+							<li><i class="icons icon-clock"></i> 8 Februari 2017 14:29 WIB</li>
+						</ul>
+						<div class="clear"></div>
+					</div>			
+										<div class="more-news-content">
+						<div class="more-news-img"><img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/08/31/anies-rasyid-baswedan-kukuhkan-panitia-bulan-dana-pmi-tahun-2018-di-balai-kota_small.jpg"></div>
+						<div class="more-news-title"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/anies-rasyid-baswedan-kukuhkan-panitia-bulan-dana-pmi-dki-jakarta-tahun-2018-di-balai-kota">Anies Rasyid Baswedan Kukuhkan Panitia Bulan Dana PMI DKI Jakarta Tahun 2018 di Balai Kota </a></div>
+						<ul class="konten-meta">
+							<li><i class="icons icon-clock"></i> 31 Agustus 2018 17:19 WIB</li>
+						</ul>
+						<div class="clear"></div>
+					</div>			
+										<div class="more-news-content">
+						<div class="more-news-img"><img src="http://dki-jakarta.pmi.or.id/upload/konten/2018/04/29/pmi-se-dki-jakarta-gelar-simulasi-tanggap-bencana-banjir-di-kelpengadegan_small.jpg"></div>
+						<div class="more-news-title"><a href="http://dki-jakarta.pmi.or.id/berita-dan-peristiwa/pmi-se-dki-jakarta-gelar-simulasi-tanggap-bencana-banjir-di-kelpengadegan">PMI se DKi Jakarta Gelar Simulasi Tanggap Bencana Banjir di Kel.Pengadegan</a></div>
+						<ul class="konten-meta">
+							<li><i class="icons icon-clock"></i> 28 April 2018 21:14 WIB</li>
+						</ul>
+						<div class="clear"></div>
+					</div>			
+									</div>
+			</div>
+			
+			<div class="sidebar">
+				<div class="sidebar-title"><span>Follow Us on Twitter</span></div>
+				<div class="sidebar-content">
+				
+					<a class="twitter-timeline" href="https://twitter.com/PMI_DKI_Jakarta" data-widget-id="244789867278630913">Tweets by @PMI_DKI_Jakarta</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				
+				</div>
+			</div>
+
+		</div>
+
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div id="footer">
+	<div class="footer-inner">
+		<div class="footer-column">
+			<div class="footer-title">Cabang PMI</div>
+			<ul>
+								<li><a href="http://dki-jakarta.pmi.or.id/cabang/pmi-jakarta-barat">PMI JAKARTA BARAT</a></li>
+								<li><a href="http://dki-jakarta.pmi.or.id/cabang/pmi-jakarta-pusat">PMI JAKARTA PUSAT</a></li>
+								<li><a href="http://dki-jakarta.pmi.or.id/cabang/pmi-jakarta-selatan">PMI JAKARTA SELATAN</a></li>
+								<li><a href="http://dki-jakarta.pmi.or.id/cabang/pmi-jakarta-timur">PMI JAKARTA TIMUR</a></li>
+								<li><a href="http://dki-jakarta.pmi.or.id/cabang/pmi-jakarta-utara">PMI JAKARTA UTARA</a></li>
+								<li><a href="http://dki-jakarta.pmi.or.id/cabang/pmi-kepulauan-seribu">PMI KEPULAUAN SERIBU</a></li>
+							</ul>
+		</div>
+		<div class="footer-column">
+			<div class="footer-title">Form Aplikasi</div>
+			<ul>
+				<li><a href="http://dki-jakarta.pmi.or.id/form-pengaduan">Form Pengaduan</a></li>
+				<li><a href="http://dki-jakarta.pmi.or.id/pendaftaran-sukarelawan">Form Pendaftaran Relawan</a></li>
+				<li><a href="http://dki-jakarta.pmi.or.id/form-mobil-darah">Form Mobil Darah</a></li>
+				<li><a href="http://dki-jakarta.pmi.or.id/form-rhesus-negative">Form Rhesus Negative</a></li>
+			</ul>
+		</div>
+		<div class="footer-column">
+			<div class="footer-title">PMI DKI Jakarta</div>
+			<div class="footer-address">
+				Jl. Kramat Raya No. 47 Jakarta Pusat 10450<br>
+Telp.: (021) 3906666 (Hunting)<br>
+Fax.: (021) 3101107<br>
+Email: info@pmidkijakarta.or.id
+			</div>
+		</div>
+		<div class="clear"></div>		
+		Copyright &#xA9; 2016 - PMI DKI Jakarta		
+		<div class="hit-counter"><a href="http://www.hit-counts.com"><img src="http://www.hit-counts.com/counter.php?t=31&amp;digits=9&amp;ic=357020&amp;cid=1034713" alt="hit counters" height="24" border="0"></a></div>
+	</div>
+</div></body>
+</html>

@@ -3,6 +3,7 @@ const Promise = require('bluebird')
 const Http = require('http-scraper')
 const assert = require('assert')
 const urls = require('./urls')
+const scraper = require('./scraper')
 
 function Scraper(options = {}) {
   const type = 'pmijkt'
@@ -24,9 +25,7 @@ function Scraper(options = {}) {
 module.exports = Scraper
 
 function getNewsPmijkt(query) {
-  console.log(query);
-  exit()
   return Promise.resolve()
     .tap(debug)
-    .then(() => )
+    .then(() => scraper.getNewsPmijkt(this.http, query))
 }

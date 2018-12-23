@@ -18,8 +18,11 @@
   "homepage": "https://github.com/ululajib/pmi-jakarta-scraper#readme",
   "dependencies": {
     "bluebird": "^3.5.3",
+    "cheerio": "^1.0.0-rc.2",
     "debug": "^4.1.0",
     "http-scraper": "0.0.7",
+    "moment": "^2.23.0",
+    "moment-timezone": "^0.5.23",
     "tape": "^4.9.1"
   }
 }

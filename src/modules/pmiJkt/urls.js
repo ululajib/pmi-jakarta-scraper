@@ -1,5 +1,5 @@
-const host = 'http://dki-jakarta.pmi.or.id'
-const uri = `https://${host}/`
+const host = 'dki-jakarta.pmi.or.id'
+const uri = `http://${host}/`
 const urls = {
   host,
   uri,
