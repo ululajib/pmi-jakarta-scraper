@@ -3,39 +3,59 @@ const Promise = require('bluebird');
 const parser = require('./parser');
 const urls = require('./urls');
 const utils = require('./utils');
+const fs = require('fs');
+const FormData = require('form-data');
 
 module.exports = {
- getNewsPmijkt,
+ postContent,
 };
 
-function getNewsPmijkt(http, options = {}) {
-  const {links} = options
-  return Promise.mapSeries(links, (link) =>
-      Promise.resolve()
-        .then(() => {
-          const options = {
-            url: urls.uri
+function postContent(http, httpImg, options = {}) {
+  const {contents} = options
+  return Promise.mapSeries(contents, (content) =>
+    Promise.resolve()
+      .delay(3000)
+      .then(() => {
+        const {img} = content
+        const options = {
+          url: `http://dki-jakarta.pmi.or.id${img}`,
+          encoding: null,
+        }
+        return httpImg.get(options)
+          .get('body')
+          .then(httpImg.saveImage('imageContent'))
+      })
+      .then((imageContent) => {
+        const {img} = content
+        const options = {
+          url: urls.content,
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          },
+          formData: {
+            'image': fs.createReadStream('capture/adminPmi/imageContent.jpg')
           }
-          utils.setRefererHeader(options, urls.uri)
-          return http.get(options)
-            .get('body')
-            .tap(http.saveHtml('newsHtml0'))
-        })
-        .delay(3000)
-        .then(() => {
-          const options = {
-            url: link
-          }
-          utils.setRefererHeader(options, urls.uri)
-          return http.get(options)
-            .get('body')
-            .tap(http.saveHtml('newsHtml1'))
-            .then(parser.getNewsPmijkt)
-        })
-    )
-    .tap(http.saveJson('getNewsPmijkt'))
-
-    function returnData(data) {
-      return data
-    }
+        }
+        utils.setRefererHeader(options, urls.uri)
+        return http.post(options)
+          .get('body')
+          .tap(http.saveJson('responseAmin'))
+          .then((result) => {
+            return result
+          })
+      })
+      .then((idImg) => {
+        const {id_image} = JSON.parse(idImg)
+        content.id_library = id_image
+        const options = {
+          url: `${urls.content_data}`,
+          form: content
+        }
+        utils.setRefererHeader(options, urls.uri)
+        return http.post(options)
+          .get('body')
+          .tap(http.saveJson('postContent'))
+          .then((data) => data)
+      })
+  )
 }
